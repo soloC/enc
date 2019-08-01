@@ -3,7 +3,7 @@
 save my enc files
 
 ## clone:
-git clone git://github.com/soloC/enc.git
+git clone git@github.com:soloC/enc.git
 
 
 # Restor
