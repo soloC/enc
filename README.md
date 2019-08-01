@@ -50,3 +50,12 @@ git clone localhost:/repo-path/repo-name.git
 git clone user@ip:/repo-path/repo-name.git
 ```
 
+# Auto Login 
+
+add you ssh public to git user's .ssh/authorized_keys file
+```
+ssh-keygen
+cat ~/.ssh/id_rsa.pub 
+
+# copy the result to the git user's ~/.ssh/authorized_keys
+```
