@@ -10,9 +10,9 @@ fi
 # sudo systemctl start sshd.service
 # cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 
-mkdir $NEW_REPO.git
+mkdir -p $NEW_REPO.git/$NEW_REPO.git
 
-cd  $NEW_REPO.git
+cd  $NEW_REPO.git/$NEW_REPO.git
 
 git init --bare
 
@@ -30,10 +30,10 @@ git add .
 
 git commit -m "initial commit"
 
-git remote add origin localhost:`pwd`/../$NEW_REPO.git
+git remote add origin localhost:`pwd`/../$NEW_REPO.git/$NEW_REPO.git
 
 git push -u origin master
 
 cd -
-
+git clone localhost:`pwd`/$NEW_REPO.git/$NEW_REPO.git
 rm test -fr
